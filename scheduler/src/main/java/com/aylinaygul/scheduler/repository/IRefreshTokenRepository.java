@@ -6,11 +6,10 @@ import java.util.UUID;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.aylinaygul.scheduler.model.User;
+import com.aylinaygul.scheduler.model.RefreshToken;
 
 @Repository
-public interface IUserRepository extends JpaRepository<User, UUID> {
-    Optional<User> findByEmail(String email);
+public interface IRefreshTokenRepository extends JpaRepository<RefreshToken, UUID> {
 
-    Optional<User> findByUsername(String username);
+    Optional<RefreshToken> findByRefreshToken(String refreshToken);
 }

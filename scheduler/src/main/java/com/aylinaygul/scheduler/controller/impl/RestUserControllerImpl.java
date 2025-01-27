@@ -1,4 +1,4 @@
-package com.aylinaygul.scheduler.controller;
+package com.aylinaygul.scheduler.controller.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -7,7 +7,7 @@ import java.util.UUID;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.aylinaygul.scheduler.model.entity.User;
+import com.aylinaygul.scheduler.model.User;
 import com.aylinaygul.scheduler.service.IUserService;
 
 import lombok.RequiredArgsConstructor;
@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/user")
-public class UserController {
+public class RestUserControllerImpl {
 
     private final IUserService userService;
 

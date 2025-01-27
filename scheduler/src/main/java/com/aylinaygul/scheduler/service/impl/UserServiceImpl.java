@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import org.springframework.stereotype.Service;
 
-import com.aylinaygul.scheduler.model.entity.User;
+import com.aylinaygul.scheduler.model.User;
 import com.aylinaygul.scheduler.repository.IUserRepository;
 import com.aylinaygul.scheduler.service.IUserService;
 
@@ -32,6 +32,11 @@ public class UserServiceImpl implements IUserService {
     @Override
     public Optional<User> getUserbyEmail(String email) {
         return userRepository.findByEmail(email);
+    }
+
+    @Override
+    public Optional<User> getUserbyUsername(String username) {
+        return userRepository.findByUsername(username);
     }
 
     @Override

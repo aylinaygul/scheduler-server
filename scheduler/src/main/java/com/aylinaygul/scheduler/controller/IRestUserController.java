@@ -1,4 +1,4 @@
-package com.aylinaygul.scheduler.service;
+package com.aylinaygul.scheduler.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.UUID;
 
 import com.aylinaygul.scheduler.model.User;
 
-public interface IUserService {
+public interface IRestUserController {
 
     List<User> getAllUsers();
 
@@ -21,4 +21,5 @@ public interface IUserService {
     User updateUser(User user);
 
     void deleteUser(UUID id);
+
 }
